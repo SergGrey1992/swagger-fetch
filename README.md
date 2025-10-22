@@ -1,16 +1,11 @@
-# @serg-grey/swagger-fetch
+# @serggrey1992/swagger-fetch
 
 > 🚀 Simple CLI tool for downloading Swagger/OpenAPI documentation
 
-[![npm version](https://img.shields.io/npm/v/@serg-grey/swagger-fetch.svg)](https://www.npmjs.com/package/@serg-grey/swagger-fetch)
+[![npm version](https://img.shields.io/npm/v/@serggrey1992/swagger-fetch.svg)](https://www.npmjs.com/package/@serggrey1992/swagger-fetch)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue.svg)](https://www.typescriptlang.org/)
 
-**Created by Sergey Grey** | [GitHub](https://github.com/serg-grey)
-
-## 📋 Requirements
-
-- Node.js >= 18.0.0 (for native fetch support)
+**Created by Sergey Grey** | [GitHub](https://github.com/SergGrey1992)
 
 ## ✨ Features
 
@@ -20,20 +15,18 @@
 - 🎯 TypeScript support
 - ⚡ Fast and simple
 - 🪶 Zero external HTTP dependencies (uses native fetch)
-- 🛠️ Minimal package size (~100KB)
 
 ## 📦 Installation
 ```bash
-npm install -D @serg-grey/swagger-fetch
+npm install -D @serggrey1992/swagger-fetch
 ```
 
 ## 🚀 Quick Start
 
 ### 1. Create config file
-
-Create `swagger-fetch.config.ts` in your project root:
 ```typescript
-import { defineConfig } from '@serg-grey/swagger-fetch';
+// swagger-fetch.config.ts
+import { defineConfig } from '@serggrey1992/swagger-fetch';
 
 export default defineConfig({
   baseOutput: 'src/services',
@@ -71,7 +64,7 @@ src/services/
 
 ### Simple Configuration
 ```typescript
-import { defineConfig } from '@serg-grey/swagger-fetch';
+import { defineConfig } from '@serggrey1992/swagger-fetch';
 
 export default defineConfig({
   baseOutput: 'src/services',
@@ -86,7 +79,7 @@ export default defineConfig({
 
 ### Multiple APIs
 ```typescript
-import { defineConfig } from '@serg-grey/swagger-fetch';
+import { defineConfig } from '@serggrey1992/swagger-fetch';
 
 export default defineConfig({
   baseOutput: 'src/services',
@@ -99,6 +92,27 @@ export default defineConfig({
     {
       name: 'payments-api',
       input: 'https://api.example.com/payments/swagger.json',
+      format: 'yaml',
+    },
+  ],
+});
+```
+
+### Different Formats
+```typescript
+import { defineConfig } from '@serggrey1992/swagger-fetch';
+
+export default defineConfig({
+  baseOutput: 'src/services',
+  sources: [
+    {
+      name: 'api-json',
+      input: 'https://api.example.com/swagger.json',
+      format: 'json',
+    },
+    {
+      name: 'api-yaml',
+      input: 'https://api.example.com/swagger.json',
       format: 'yaml',
     },
   ],
@@ -146,7 +160,7 @@ swagger-fetch --version
 ### With Next.js
 ```typescript
 // swagger-fetch.config.ts
-import { defineConfig } from '@serg-grey/swagger-fetch';
+import { defineConfig } from '@serggrey1992/swagger-fetch';
 
 export default defineConfig({
   baseOutput: 'src/lib/api',
@@ -171,7 +185,7 @@ export default defineConfig({
 
 ### Microservices
 ```typescript
-import { defineConfig } from '@serg-grey/swagger-fetch';
+import { defineConfig } from '@serggrey1992/swagger-fetch';
 
 export default defineConfig({
   baseOutput: 'src/api/specs',
@@ -183,37 +197,9 @@ export default defineConfig({
 });
 ```
 
-Result:
-```
-src/api/specs/
-├── user-service/
-│   └── swagger.json
-├── order-service/
-│   └── swagger.json
-└── payment-service/
-    └── swagger.json
-```
+## 📋 Requirements
 
-### Different Formats
-```typescript
-import { defineConfig } from '@serg-grey/swagger-fetch';
-
-export default defineConfig({
-  baseOutput: 'src/services',
-  sources: [
-    {
-      name: 'api-json',
-      input: 'https://api.example.com/swagger.json',
-      format: 'json',
-    },
-    {
-      name: 'api-yaml',
-      input: 'https://api.example.com/swagger.json',
-      format: 'yaml',
-    },
-  ],
-});
-```
+- Node.js >= 18.0.0 (for native fetch support)
 
 ## 🤝 Integration
 
@@ -224,14 +210,14 @@ Works great with code generators like:
 ```json
 {
   "scripts": {
-    "swagger:download": "swagger-fetch download"
+    "swagger:download": "swagger-fetch download",
   }
 }
 ```
 
 ## 📝 License
 
-MIT © [Sergey Grey](https://github.com/serg-grey)
+MIT © [Sergey Grey](https://github.com/SergGrey1992)
 
 ## 🙏 Contributing
 
@@ -239,8 +225,8 @@ Contributions are welcome! Feel free to open issues or submit PRs.
 
 ## 📮 Support
 
-- 🐛 [Report a bug](https://github.com/serg-grey/swagger-fetch/issues)
-- 💡 [Request a feature](https://github.com/serg-grey/swagger-fetch/issues)
+- 🐛 [Report a bug](https://github.com/SergGrey1992/swagger-fetch/issues)
+- 💡 [Request a feature](https://github.com/SergGrey1992/swagger-fetch/issues)
 
 ---
 

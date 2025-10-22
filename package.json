@@ -1,16 +1,16 @@
 {
-  "name": "@serg-grey/swagger-fetch",
+  "name": "@serggrey1992/swagger-fetch",
   "version": "1.0.0",
   "description": "Simple CLI tool for downloading Swagger/OpenAPI documentation",
   "author": {
-    "name": "Sergey Tsviatkov",
+    "name": "Sergey Grey",
     "email": "sergdiag19@gmail.com",
     "url": "https://github.com/SergGrey1992"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SergGrey1992/swagger-fetch.git"
+    "url": "git+https://github.com/SergGrey1992/swagger-fetch.git"
   },
   "bugs": {
     "url": "https://github.com/SergGrey1992/swagger-fetch/issues"
@@ -42,11 +42,7 @@
   "scripts": {
     "build": "tsup src/index.ts src/cli.ts --format cjs,esm --dts --clean",
     "dev": "tsup src/index.ts src/cli.ts --format cjs,esm --dts --watch",
-    "prepublishOnly": "npm run build",
-    "release": "npm run build && npm publish --access public",
-    "test": "echo \"No tests yet\"",
-    "lint": "eslint src --ext .ts",
-    "format": "prettier --write \"src/**/*.ts\""
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "chalk": "^4.1.2",
@@ -58,11 +54,7 @@
     "@types/node": "^20.10.0",
     "@types/js-yaml": "^4.0.9",
     "typescript": "^5.3.3",
-    "tsup": "^8.0.1",
-    "eslint": "^8.55.0",
-    "@typescript-eslint/eslint-plugin": "^6.13.2",
-    "@typescript-eslint/parser": "^6.13.2",
-    "prettier": "^3.1.0"
+    "tsup": "^8.0.1"
   },
   "engines": {
     "node": ">=18.0.0"
