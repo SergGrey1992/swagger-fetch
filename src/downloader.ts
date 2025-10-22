@@ -55,7 +55,7 @@ export class SwaggerDownloader {
             }
 
             // Parse JSON
-            const data = await response.json();
+            const data = await response.json() as any;
 
             // Basic validation - check if it looks like swagger/openapi
             if (!data.swagger && !data.openapi) {
