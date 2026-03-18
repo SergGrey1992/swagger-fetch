@@ -45,12 +45,13 @@ export async function loadConfig(configPath?: string): Promise<Config> {
     ];
 
     const paths = configPath ? [configPath] : defaultPaths;
+    const jiti = createJiti(process.cwd());
 
     for (const p of paths) {
         try {
             const fullPath = path.resolve(process.cwd(), p);
-            const config = await import(fullPath);
-            return config.default || config;
+            const config = await jiti.import(fullPath);
+            return (config as any).default || config;
         } catch (err) {
             continue;
         }

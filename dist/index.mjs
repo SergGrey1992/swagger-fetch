@@ -1,7 +1,7 @@
 import {
   SwaggerDownloader,
   defineConfig
-} from "./chunk-PRMEMQVW.mjs";
+} from "./chunk-RKTQGDUQ.mjs";
 export {
   SwaggerDownloader,
   defineConfig

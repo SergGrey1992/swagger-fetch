@@ -3,7 +3,7 @@ import {
   SwaggerDownloader,
   loadConfig,
   normalizeConfig
-} from "./chunk-PRMEMQVW.mjs";
+} from "./chunk-RKTQGDUQ.mjs";
 
 // src/cli.ts
 import { Command } from "commander";

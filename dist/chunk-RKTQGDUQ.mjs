@@ -55,7 +55,8 @@ var SwaggerDownloader = class {
       const response = await fetch(source.input, {
         signal: controller.signal,
         headers: {
-          "Accept": "application/json"
+          "Accept": "application/json",
+          "User-Agent": "Mozilla/5.0 (compatible; swagger-fetch/1.0)"
         }
       });
       clearTimeout(timeoutId);
