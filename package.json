@@ -1,6 +1,6 @@
 {
   "name": "@serggrey1992/swagger-fetch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple CLI tool for downloading Swagger/OpenAPI documentation",
   "author": {
     "name": "Sergey Grey",
